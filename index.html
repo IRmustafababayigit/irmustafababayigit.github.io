@@ -22,11 +22,7 @@ body{
 }
 
 header{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:60px 40px;
+    padding:50px 40px 30px 40px;
     background:linear-gradient(135deg,#111,#1a1a1a);
     border-bottom:1px solid #222;
 }
@@ -34,18 +30,20 @@ header{
 .hero{
     max-width:1200px;
     width:100%;
+    margin:auto;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-start;
     gap:80px;
 }
 
 .hero-text{
     flex:1;
+    padding-top:20px;
 }
 
 .hero-text h1{
-    font-size:4rem;
+    font-size:3.2rem;
     margin-bottom:20px;
 }
 
@@ -56,8 +54,8 @@ header{
 }
 
 .profile-image{
-    width:320px;
-    height:320px;
+    width:240px;
+    height:240px;
     object-fit:cover;
     border-radius:50%;
     border:5px solid #4da3ff;
@@ -143,15 +141,20 @@ a:hover{
     .hero{
         flex-direction:column-reverse;
         text-align:center;
+        align-items:center;
+    }
+
+    .hero-text{
+        padding-top:0;
     }
 
     .hero-text h1{
-        font-size:2.8rem;
+        font-size:2.5rem;
     }
 
     .profile-image{
-        width:220px;
-        height:220px;
+        width:200px;
+        height:200px;
     }
 
 }
