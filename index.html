@@ -22,7 +22,7 @@ body{
 }
 
 header{
-    padding:50px 40px 30px 40px;
+    padding:35px 40px 20px 40px;
     background:linear-gradient(135deg,#111,#1a1a1a);
     border-bottom:1px solid #222;
 }
@@ -34,78 +34,79 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    gap:80px;
+    gap:70px;
 }
 
 .hero-text{
     flex:1;
-    padding-top:20px;
+    padding-top:15px;
 }
 
 .hero-text h1{
-    font-size:2.7rem;
-    margin-bottom:20px;
+    font-size:2rem;
+    margin-bottom:14px;
+    font-weight:700;
 }
 
 .hero-text p{
     color:#bbbbbb;
-    margin-bottom:10px;
-    font-size:1.1rem;
+    margin-bottom:8px;
+    font-size:1rem;
 }
 
 .profile-image{
-    width:240px;
-    height:240px;
+    width:180px;
+    height:180px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #4da3ff;
-    box-shadow:0 0 40px rgba(77,163,255,0.25);
+    border:4px solid #4da3ff;
+    box-shadow:0 0 30px rgba(77,163,255,0.20);
 }
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:80px 20px;
+    padding:70px 20px;
 }
 
 .section{
-    margin-bottom:90px;
+    margin-bottom:80px;
 }
 
 .section h2{
-    font-size:2rem;
-    margin-bottom:30px;
+    font-size:1.8rem;
+    margin-bottom:28px;
     border-left:4px solid #4da3ff;
     padding-left:15px;
 }
 
 .about{
-    font-size:1.1rem;
+    font-size:1.05rem;
     color:#cccccc;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    gap:28px;
 }
 
 .card{
     background:#161616;
     border:1px solid #2c2c2c;
-    padding:35px;
+    padding:32px;
     border-radius:16px;
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
     border-color:#4da3ff;
 }
 
 .card h3{
     margin-bottom:18px;
-    font-size:1.4rem;
+    font-size:1.3rem;
     color:white;
 }
 
@@ -116,13 +117,13 @@ header{
 .publication-box{
     background:#161616;
     border:1px solid #2c2c2c;
-    padding:35px;
+    padding:32px;
     border-radius:16px;
 }
 
 footer{
     text-align:center;
-    padding:40px;
+    padding:35px;
     border-top:1px solid #222;
     color:#888;
 }
@@ -142,6 +143,7 @@ a:hover{
         flex-direction:column-reverse;
         text-align:center;
         align-items:center;
+        gap:40px;
     }
 
     .hero-text{
@@ -149,12 +151,12 @@ a:hover{
     }
 
     .hero-text h1{
-        font-size:2.5rem;
+        font-size:2rem;
     }
 
     .profile-image{
-        width:200px;
-        height:200px;
+        width:170px;
+        height:170px;
     }
 
 }
