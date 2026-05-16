@@ -22,45 +22,61 @@ body{
 }
 
 header{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,#111,#1f1f1f);
-    border-bottom:1px solid #333;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 40px;
+    background:linear-gradient(135deg,#111,#1a1a1a);
+    border-bottom:1px solid #222;
+}
+
+.hero{
+    max-width:1200px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#bbbbbb;
+    margin-bottom:10px;
+    font-size:1.1rem;
 }
 
 .profile-image{
-    width:180px;
-    height:180px;
+    width:320px;
+    height:320px;
     object-fit:cover;
     border-radius:50%;
-    border:4px solid #4da3ff;
-    margin-bottom:25px;
-    box-shadow:0 0 30px rgba(77,163,255,0.25);
-}
-
-header h1{
-    font-size:3rem;
-    margin-bottom:15px;
-}
-
-header p{
-    color:#bbbbbb;
-    margin-bottom:8px;
+    border:5px solid #4da3ff;
+    box-shadow:0 0 40px rgba(77,163,255,0.25);
 }
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:60px 20px;
+    padding:80px 20px;
 }
 
 .section{
-    margin-bottom:80px;
+    margin-bottom:90px;
 }
 
 .section h2{
     font-size:2rem;
-    margin-bottom:25px;
+    margin-bottom:30px;
     border-left:4px solid #4da3ff;
     padding-left:15px;
 }
@@ -73,24 +89,24 @@ header p{
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+    gap:30px;
 }
 
 .card{
     background:#161616;
     border:1px solid #2c2c2c;
-    padding:30px;
-    border-radius:14px;
+    padding:35px;
+    border-radius:16px;
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
     border-color:#4da3ff;
 }
 
 .card h3{
-    margin-bottom:15px;
+    margin-bottom:18px;
     font-size:1.4rem;
     color:white;
 }
@@ -102,8 +118,8 @@ header p{
 .publication-box{
     background:#161616;
     border:1px solid #2c2c2c;
-    padding:30px;
-    border-radius:14px;
+    padding:35px;
+    border-radius:16px;
 }
 
 footer{
@@ -122,14 +138,20 @@ a:hover{
     text-decoration:underline;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-    header h1{
-        font-size:2.2rem;
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
     }
 
-    .section h2{
-        font-size:1.6rem;
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+
+    .profile-image{
+        width:220px;
+        height:220px;
     }
 
 }
@@ -141,13 +163,21 @@ a:hover{
 
 <header>
 
-    <img src="profile.png" alt="Mustafa Babayigit" class="profile-image">
+    <div class="hero">
 
-    <h1>Mustafa Babayigit</h1>
+        <div class="hero-text">
 
-    <p>Independent Researcher, Belgium</p>
+            <h1>Mustafa Babayigit</h1>
 
-    <p>ORCID: 0009-0006-2933-281X</p>
+            <p>Independent Researcher, Belgium</p>
+
+            <p>ORCID: 0009-0006-2933-281X</p>
+
+        </div>
+
+        <img src="profile.png" alt="Mustafa Babayigit" class="profile-image">
+
+    </div>
 
 </header>
 
