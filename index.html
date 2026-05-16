@@ -1,128 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustafa Babayigit Research</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #222;
-            margin: 0;
-            padding: 0;
-        }
+<title>Mustafa Babayigit Research</title>
 
-        header {
-            background-color: #111;
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
+<style>
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px;
-            background: white;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        h1, h2 {
-            margin-top: 0;
-        }
+body{
+    background:#0d0d0d;
+    color:#eaeaea;
+    font-family:Arial, sans-serif;
+    line-height:1.7;
+}
 
-        .section {
-            margin-bottom: 50px;
-        }
+header{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#111,#1f1f1f);
+    border-bottom:1px solid #333;
+}
 
-        .paper {
-            padding: 20px;
-            border-left: 4px solid #333;
-            background: #f9f9f9;
-            margin-bottom: 20px;
-        }
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #666;
-        }
+header p{
+    color:#bbbbbb;
+    margin-bottom:8px;
+}
 
-        a {
-            color: #0044cc;
-            text-decoration: none;
-        }
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+.section{
+    margin-bottom:80px;
+}
+
+.section h2{
+    font-size:2rem;
+    margin-bottom:25px;
+    border-left:4px solid #4da3ff;
+    padding-left:15px;
+}
+
+.about{
+    font-size:1.1rem;
+    color:#cccccc;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#161616;
+    border:1px solid #2c2c2c;
+    padding:30px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#4da3ff;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+    color:white;
+}
+
+.card p{
+    color:#bbbbbb;
+}
+
+.publication-box{
+    background:#161616;
+    border:1px solid #2c2c2c;
+    padding:30px;
+    border-radius:14px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #222;
+    color:#888;
+}
+
+a{
+    color:#4da3ff;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .section h2{
+        font-size:1.6rem;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
+
     <h1>Mustafa Babayigit</h1>
+
     <p>Independent Researcher, Belgium</p>
+
     <p>ORCID: 0009-0006-2933-281X</p>
+
 </header>
 
-<main>
+<div class="container">
 
     <section class="section">
+
         <h2>About</h2>
 
-        <p>
+        <p class="about">
             Personal research website focused on galactic dynamics,
             Radial Acceleration Relation (RAR) analysis,
             dwarf galaxy regime structure,
             dynamical systems,
-            and empirical astrophysical modeling.
+            empirical astrophysical modeling,
+            and reproducible scientific workflows.
         </p>
 
     </section>
 
     <section class="section">
+
         <h2>Research Projects</h2>
 
-        <div class="paper">
-            <h3>Validated Multi-Regime Analysis of the RAR</h3>
+        <div class="cards">
 
-            <p>
-                Empirical investigation of RAR stability,
-                dwarf galaxy breakdown,
-                structure-dependent corrections,
-                and robustness analysis.
-            </p>
-        </div>
+            <div class="card">
 
-        <div class="paper">
-            <h3>Dissipative Dynamic System V3</h3>
+                <h3>Validated Multi-Regime Analysis of the RAR</h3>
 
-            <p>
-                Dynamical systems analysis of galactic regimes,
-                residual flow structure,
-                attractor topology,
-                and halo-coupled RAR behavior.
-            </p>
+                <p>
+                    Empirical investigation of RAR stability,
+                    dwarf galaxy breakdown,
+                    structure-dependent corrections,
+                    robustness testing,
+                    and cross-regime validation.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Dissipative Dynamic System V3</h3>
+
+                <p>
+                    Dynamical systems analysis of galactic regimes,
+                    residual-flow structure,
+                    attractor topology,
+                    halo-coupled dynamics,
+                    and empirical regime transitions.
+                </p>
+
+            </div>
+
         </div>
 
     </section>
 
     <section class="section">
+
         <h2>Publications</h2>
 
-        <p>
-            Publications and reproducibility packages will be added here.
-        </p>
+        <div class="publication-box">
+
+            <p>
+                Publications, datasets,
+                figures,
+                reproducibility packages,
+                and scientific papers will be added here.
+            </p>
+
+        </div>
 
     </section>
 
-</main>
+</div>
 
 <footer>
-    © 2026 Mustafa Babayigit
+
+    © 2026 Mustafa Babayigit Research
+
 </footer>
 
 </body>
