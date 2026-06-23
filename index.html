@@ -7,7 +7,7 @@
 
 <title>Mustafa Babayigit | Independent Researcher</title>
 
-<meta name="description" content="Official research website of Mustafa Babayigit. Independent Researcher in Belgium working on reproducible astrophysics, galaxy dynamics, open science and reproducible scientific workflows.">
+<meta name="description" content="Official research website of Mustafa Babayigit. Independent Researcher in Belgium working on reproducible astrophysics, galaxy dynamics, RAR analysis, instability-axis reconstruction, SPARC galaxy data, open science and reproducible scientific workflows.">
 
 <style>
 
@@ -30,32 +30,53 @@ body{
     min-height:100vh;
     font-family:Arial, Helvetica, sans-serif;
     color:var(--text);
-
     background:
-    radial-gradient(circle at top left,
-    rgba(77,163,255,0.18),
-    transparent 35%),
-
-    radial-gradient(circle at bottom right,
-    rgba(77,163,255,0.10),
-    transparent 35%),
-
-    var(--bg);
-
+        radial-gradient(circle at top left, rgba(77,163,255,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(77,163,255,0.10), transparent 35%),
+        var(--bg);
     line-height:1.7;
 }
 
 /* HEADER */
 
 header{
-    padding:70px 30px 60px;
+    padding:34px 30px 60px;
     border-bottom:1px solid rgba(255,255,255,0.06);
 }
+
+/* TOP MENU */
+
+.top-menu{
+    max-width:1200px;
+    margin:0 auto 34px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.top-menu a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.98rem;
+    padding-bottom:5px;
+    border-bottom:2px solid transparent;
+    transition:all .25s ease;
+}
+
+.top-menu a:hover{
+    color:var(--accent);
+    border-bottom:2px solid var(--accent);
+    transform:translateY(-3px) scale(1.04);
+}
+
+/* HERO */
 
 .hero{
     max-width:1200px;
     margin:auto;
-
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:30px;
@@ -69,12 +90,8 @@ header{
     backdrop-filter:blur(14px);
     border-radius:24px;
     padding:42px;
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.25);
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
-
-/* LEFT */
 
 .hero-text h1{
     font-size:3rem;
@@ -85,58 +102,22 @@ header{
 .subtitle{
     color:var(--muted);
     font-size:1.1rem;
-    margin-bottom:24px;
+    margin-bottom:26px;
 }
 
-.top-menu{
-    max-width:1200px;
-    margin:28px auto 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:22px;
-}
-
-.top-menu a{
-    color:#d9d9d9;
-    text-decoration:none;
-    font-weight:600;
-    padding-bottom:4px;
-    border-bottom:2px solid transparent;
-    transition:all .25s ease;
-}
-
-.top-menu a:hover{
-    color:var(--accent);
-    border-bottom:2px solid var(--accent);
-    transform:translateY(-2px);
-}
-
-.info-line{
-    color:#cfcfcf;
-    margin-bottom:8px;
-}
-
-.info-line a{
-    color:var(--accent);
-    text-decoration:none;
-}
+/* KEYWORDS */
 
 .research-tags{
     display:flex;
     flex-wrap:wrap;
     gap:10px;
-    margin-top:25px;
 }
 
 .tag{
     padding:8px 14px;
     border-radius:999px;
-
     background:rgba(77,163,255,0.08);
     border:1px solid rgba(77,163,255,0.25);
-
     font-size:0.82rem;
     color:#dfefff;
 }
@@ -147,29 +128,21 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-
     transition:all .3s ease;
 }
 
 .profile-card:hover{
     transform:translateY(-5px);
-    box-shadow:
-    0 20px 60px rgba(77,163,255,0.15);
+    box-shadow:0 20px 60px rgba(77,163,255,0.15);
 }
 
 .profile-image{
     width:280px;
     height:280px;
-
     object-fit:cover;
-
     border-radius:50%;
-
     border:4px solid var(--accent);
-
-    box-shadow:
-    0 0 30px rgba(77,163,255,0.30);
-
+    box-shadow:0 0 30px rgba(77,163,255,0.30);
     transition:all .3s ease;
 }
 
@@ -195,27 +168,20 @@ header{
     background:var(--card);
     border:1px solid var(--border);
     backdrop-filter:blur(14px);
-
     border-radius:24px;
     padding:36px;
-
     transition:all .3s ease;
 }
 
 .section-card:hover{
     transform:translateY(-6px);
-
-    border-color:
-    rgba(77,163,255,0.35);
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.25);
+    border-color:rgba(77,163,255,0.35);
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
 
 .section-card h2{
     font-size:1.6rem;
     margin-bottom:20px;
-
     border-left:4px solid var(--accent);
     padding-left:14px;
 }
@@ -237,37 +203,28 @@ header{
 .archive-link{
     display:inline-block;
     margin-top:20px;
-
     padding:10px 18px;
-
     border-radius:999px;
-
-    border:1px solid rgba(77,163,255,0.4);
-
-    background:
-    rgba(77,163,255,0.08);
-
+    border:1px solid rgba(255,255,255,0.55);
+    background:rgba(255,255,255,0.08);
+    color:#ffffff;
     text-decoration:none;
-
+    font-weight:600;
     transition:all .25s ease;
 }
 
 .archive-link:hover{
     transform:translateY(-3px);
-    background:
-    rgba(77,163,255,0.16);
+    background:rgba(255,255,255,0.16);
+    color:#ffffff;
 }
 
 /* FOOTER */
 
 footer{
     text-align:center;
-
     padding:40px 20px;
-
-    border-top:
-    1px solid rgba(255,255,255,0.08);
-
+    border-top:1px solid rgba(255,255,255,0.08);
     color:#8d8d8d;
     font-size:.9rem;
 }
@@ -275,6 +232,10 @@ footer{
 /* MOBILE */
 
 @media(max-width:900px){
+
+    header{
+        padding:28px 18px 45px;
+    }
 
     .hero{
         grid-template-columns:1fr;
@@ -293,6 +254,11 @@ footer{
         height:220px;
     }
 
+    .top-menu{
+        gap:20px;
+        margin-bottom:28px;
+    }
+
 }
 
 </style>
@@ -301,53 +267,6 @@ footer{
 <body>
 
 <header>
-
-<div class="hero">
-
-<div class="hero-card hero-text">
-
-<h1>Mustafa Babayigit</h1>
-
-<p class="subtitle">
-Independent Researcher, Belgium
-</p>
-
-<div class="info-line">
-ORCID:
-<a href="https://orcid.org/0009-0006-2933-281X" target="_blank">
-0009-0006-2933-281X
-</a>
-</div>
-
-<div class="info-line">
-Email:
-<a href="mailto:mustafa.babayigit@outlook.be">
-mustafa.babayigit@outlook.be
-</a>
-</div>
-
-<div class="research-tags">
-
-<div class="tag">Galaxy Dynamics</div>
-<div class="tag">Astrophysics</div>
-<div class="tag">Open Science</div>
-<div class="tag">Reproducibility</div>
-<div class="tag">RAR Analysis</div>
-
-</div>
-
-</div>
-
-<div class="profile-card">
-
-<img
-src="profile.png"
-alt="Mustafa Babayigit"
-class="profile-image">
-
-</div>
-
-</div>
 
 <nav class="top-menu">
 
@@ -368,6 +287,61 @@ Contact
 </a>
 
 </nav>
+
+<div class="hero">
+
+<div class="hero-card hero-text">
+
+<h1>Mustafa Babayigit</h1>
+
+<p class="subtitle">
+Independent Researcher, Belgium
+</p>
+
+<div class="research-tags">
+
+<div class="tag">Galaxy Dynamics</div>
+<div class="tag">Astrophysics</div>
+<div class="tag">Disk Galaxies</div>
+<div class="tag">Dwarf Galaxies</div>
+<div class="tag">SPARC Database</div>
+<div class="tag">SPARC Galaxies</div>
+<div class="tag">Galaxy Rotation Curves</div>
+<div class="tag">RAR Analysis</div>
+<div class="tag">Radial Acceleration Relation</div>
+<div class="tag">Regime-Dependent Dynamics</div>
+<div class="tag">Instability-Axis Reconstruction</div>
+<div class="tag">Phase Transition Mapping</div>
+<div class="tag">Regime Classification</div>
+<div class="tag">Residual Flow Analysis</div>
+<div class="tag">Residual Structure</div>
+<div class="tag">Galaxy-Regime Transitions</div>
+<div class="tag">Dynamical Systems</div>
+<div class="tag">Dissipative Systems</div>
+<div class="tag">Entropy Analysis</div>
+<div class="tag">Empirical Methodology</div>
+<div class="tag">Statistical Robustness</div>
+<div class="tag">Bootstrap Analysis</div>
+<div class="tag">Monte Carlo Validation</div>
+<div class="tag">Reproducible Research</div>
+<div class="tag">Open Science</div>
+<div class="tag">Research Software</div>
+<div class="tag">Scientific Workflows</div>
+<div class="tag">Scientific Visualization</div>
+<div class="tag">Data Analysis</div>
+<div class="tag">Zenodo Research Archive</div>
+
+</div>
+
+</div>
+
+<div class="profile-card">
+
+<img src="profile.png" alt="Mustafa Babayigit" class="profile-image">
+
+</div>
+
+</div>
 
 </header>
 
