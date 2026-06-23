@@ -18,117 +18,224 @@
 }
 
 body{
-    background:#0b0b0d;
+    min-height:100vh;
+    background:
+        radial-gradient(circle at top left, rgba(77,163,255,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(77,163,255,0.10), transparent 35%),
+        #0b0b0d;
     color:#eaeaea;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     line-height:1.7;
 }
 
+/* HEADER */
+
 header{
-    padding:18px 35px;
-    background:linear-gradient(135deg,#111,#181818);
-    border-bottom:1px solid #242424;
+    padding:70px 30px 55px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .hero{
-    max-width:1300px;
+    max-width:1100px;
     margin:auto;
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:1.3fr 0.7fr;
     align-items:center;
-    gap:40px;
+    gap:50px;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.045);
+    border:1px solid rgba(255,255,255,0.10);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    padding:38px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
 
 .hero-text h1{
-    font-size:1.45rem;
-    margin-bottom:8px;
+    font-size:2.35rem;
+    margin-bottom:10px;
+    letter-spacing:-0.04em;
 }
 
-.hero-text p{
+.subtitle{
     color:#b8b8b8;
-    margin-bottom:4px;
+    font-size:1.05rem;
+    margin-bottom:18px;
+}
+
+.info-line{
+    color:#c8c8c8;
+    margin-bottom:5px;
+}
+
+.profile-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+.profile-card{
+    background:rgba(255,255,255,0.045);
+    border:1px solid rgba(255,255,255,0.10);
+    backdrop-filter:blur(14px);
+    border-radius:26px;
+    padding:28px;
+    text-align:center;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-card:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 20px 50px rgba(77,163,255,0.16);
 }
 
 .profile-image{
-    width:105px;
-    height:105px;
+    width:155px;
+    height:155px;
     object-fit:cover;
     border-radius:50%;
     border:3px solid #4da3ff;
-    box-shadow:0 0 16px rgba(77,163,255,0.18);
+    box-shadow:0 0 22px rgba(77,163,255,0.28);
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:55px 20px;
+.profile-name{
+    margin-top:16px;
+    font-weight:700;
 }
 
-.section{
-    margin-bottom:60px;
+.profile-role{
+    color:#9e9e9e;
+    font-size:0.9rem;
 }
 
-.section h2{
-    font-size:1.55rem;
-    margin-bottom:24px;
-    border-left:4px solid #4da3ff;
-    padding-left:14px;
-}
-
-.box{
-    background:#151515;
-    border:1px solid #2a2a2a;
-    padding:32px;
-    border-radius:14px;
-}
-
-ul{
-    padding-left:24px;
-    color:#c7c7c7;
-}
+/* LINKS */
 
 a{
     color:#4da3ff;
     text-decoration:none;
+    transition:transform 0.2s ease, color 0.2s ease;
 }
 
 a:hover{
-    text-decoration:underline;
+    color:#82c2ff;
+    text-decoration:none;
 }
 
 .button-row{
-    margin-top:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:22px;
 }
 
-.button-row a{
+.button-row a,
+.archive-link{
     display:inline-block;
-    margin-right:12px;
-    margin-top:8px;
-    padding:7px 13px;
-    border:1px solid #4da3ff;
-    border-radius:20px;
-    font-size:0.82rem;
+    padding:10px 16px;
+    border:1px solid rgba(77,163,255,0.75);
+    border-radius:999px;
+    background:rgba(77,163,255,0.06);
+    font-size:0.88rem;
+    transition:transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
 }
+
+.button-row a:hover,
+.archive-link:hover{
+    transform:translateY(-3px) scale(1.045);
+    background:rgba(77,163,255,0.14);
+    box-shadow:0 10px 25px rgba(77,163,255,0.16);
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 24px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    align-items:stretch;
+}
+
+.section-card{
+    background:rgba(255,255,255,0.045);
+    border:1px solid rgba(255,255,255,0.10);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    padding:34px;
+    min-height:100%;
+    transition:transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(77,163,255,0.38);
+    box-shadow:0 20px 45px rgba(0,0,0,0.22);
+}
+
+.section-card h2{
+    font-size:1.45rem;
+    margin-bottom:20px;
+    border-left:4px solid #4da3ff;
+    padding-left:14px;
+}
+
+.section-card p{
+    color:#cfcfcf;
+}
+
+ul{
+    padding-left:22px;
+    color:#c7c7c7;
+    margin-top:18px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* FOOTER */
 
 footer{
     text-align:center;
-    padding:30px;
-    border-top:1px solid #222;
+    padding:35px 20px;
+    border-top:1px solid rgba(255,255,255,0.08);
     color:#8c8c8c;
     font-size:0.85rem;
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
 
+    header{
+        padding:35px 18px;
+    }
+
     .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-        gap:20px;
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:1.9rem;
+    }
+
+    .hero-card{
+        padding:28px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
     }
 
     .profile-image{
-        width:95px;
-        height:95px;
+        width:125px;
+        height:125px;
     }
 
 }
@@ -142,27 +249,27 @@ footer{
 
 <div class="hero">
 
-<div class="hero-text">
+<div class="hero-card hero-text">
 
 <h1>Mustafa Babayigit</h1>
 
-<p>Independent Researcher, Belgium</p>
+<p class="subtitle">Independent Researcher, Belgium</p>
 
-<p>
+<p class="info-line">
 ORCID:
 <a href="https://orcid.org/0009-0006-2933-281X" target="_blank">
 0009-0006-2933-281X
 </a>
 </p>
 
-<p>
+<p class="info-line">
 Email:
 <a href="mailto:mustafa.babayigit@outlook.be">
 mustafa.babayigit@outlook.be
 </a>
 </p>
 
-<p>
+<p class="info-line">
 Website:
 <a href="https://irmustafababayigit.github.io" target="_blank">
 irmustafababayigit.github.io
@@ -187,27 +294,33 @@ ORCID
 
 </div>
 
+<div class="profile-wrap">
+
+<div class="profile-card">
 <img src="profile.png" alt="Mustafa Babayigit" class="profile-image">
+<div class="profile-name">Mustafa Babayigit</div>
+<div class="profile-role">Independent Researcher</div>
+</div>
+
+</div>
 
 </div>
 
 </header>
 
-<div class="container">
+<main class="container">
 
-<section class="section">
+<div class="grid">
+
+<section class="section-card">
 
 <h2>Research Focus</h2>
-
-<div class="box">
 
 <p>
 My research focuses on reproducible empirical investigations in astrophysics,
 galaxy dynamics, dynamical systems, statistical methodology,
 and open-science reproducibility frameworks.
 </p>
-
-<br>
 
 <ul>
 <li>Regime-dependent Radial Acceleration Relation analysis</li>
@@ -217,15 +330,11 @@ and open-science reproducibility frameworks.
 <li>Reproducible scientific workflows and open research archives</li>
 </ul>
 
-</div>
-
 </section>
 
-<section class="section">
+<section class="section-card">
 
 <h2>Research Archive</h2>
-
-<div class="box">
 
 <p>
 All publications, datasets, reproducibility packages,
@@ -243,28 +352,20 @@ research datasets and software releases.
 
 <br>
 
-<p>
-<a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Babayigit%2C%20Mustafa%22&l=list&p=1&s=10&sort=bestmatch" target="_blank">
+<a class="archive-link" href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Babayigit%2C%20Mustafa%22&l=list&p=1&s=10&sort=bestmatch" target="_blank">
 View Complete Zenodo Research Archive →
 </a>
-</p>
-
-</div>
 
 </section>
 
 </div>
 
+</main>
+
 <footer>
 
-© 2026 Mustafa Babayigit
-
-<br>
-
-Independent Researcher, Belgium
-
-<br>
-
+© 2026 Mustafa Babayigit<br>
+Independent Researcher, Belgium<br>
 ORCID: 0009-0006-2933-281X
 
 </footer>
